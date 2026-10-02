@@ -1,42 +1,346 @@
-/****** Main Styling ******/
+/* =========================
+   FILESCOPE - MAIN STYLES
+   ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "DM Sans", sans-serif;
+  background: #f4f7f6;
+  color: #17211d;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe7e3;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #183f35;
+  color: #ffffff;
+  border-radius: 9px;
   font-size: 16px;
-  color: #222;
-  background-color: #ECF0F1;
+}
+
+.api-label {
+  background: #e8f1ee;
+  color: #275b4d;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.main-container {
+  width: 90%;
+  max-width: 1050px;
+  margin: 65px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+
+/* =========================
+   INTRO SECTION
+   ========================= */
+
+.intro {
+  padding-right: 20px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #4b776b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.intro h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.intro h1 span {
+  color: #4b776b;
+}
+
+.intro p {
+  max-width: 470px;
+  color: #68756f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   UPLOAD CARD
+   ========================= */
+
+.upload-card {
+  background: #ffffff;
+  border: 1px solid #dfe7e3;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 45px rgba(30, 58, 49, 0.08);
+}
+
+.card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.step-label {
+  color: #4b776b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.card-heading h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.status {
+  background: #eaf5ef;
+  color: #33705c;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 11px;
+  border-radius: 20px;
+}
+
+
+/* =========================
+   FILE UPLOAD AREA
+   ========================= */
+
+.upload-area {
+  padding: 35px 25px;
   text-align: center;
+  background: #f8faf9;
+  border: 1.5px dashed #b8cbc4;
+  border-radius: 13px;
 }
 
-.container {
-  padding: 0;
-  margin-top: 40px;
+.upload-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6f0ec;
+  color: #285c4d;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.footer {
-  margin-top: 60px;
+.upload-area h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
 }
 
-a {
-  color: #2574A9;
+.upload-area p {
+  color: #7a8781;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
-input {
+#inputfield {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #d6e0dc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #58655f;
+}
+
+#inputfield::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 13px;
+  border: none;
+  border-radius: 6px;
+  background: #e7efec;
+  color: #214d41;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+#button {
+  width: 100%;
+  margin-top: 17px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #183f35;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#button:hover {
+  background: #245849;
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   METADATA PREVIEW
+   ========================= */
+
+.metadata-preview {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e6ece9;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.metadata-preview div {
+  padding-right: 10px;
+}
+
+.metadata-preview span {
   display: block;
-  position: relative;
-  margin: 10px auto;
+  color: #82908a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 
-input#button {
-  width: 230px;
+.metadata-preview p {
+  color: #33413b;
+  font-size: 12px;
 }
 
-.view {
-  position:relative;
-  margin: auto;
-  margin-top: 40px;
-  border: 1px  solid  #aaa;
-  padding: 20px;
-  width: 60%;
-  min-width: 400px;
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  width: 90%;
+  max-width: 1050px;
+  margin: 0 auto 30px;
+  padding-top: 20px;
+  border-top: 1px solid #dfe7e3;
+  color: #8a9691;
+  font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 45px auto;
+  }
+
+  .intro {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .intro h1 {
+    font-size: 42px;
+  }
+
+  .intro p {
+    margin: 0 auto;
+  }
+
+  .upload-card {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .intro h1 {
+    font-size: 35px;
+  }
+
+  .upload-card {
+    padding: 20px;
+  }
+
+  .metadata-preview {
+    grid-template-columns: 1fr;
+  }
+
 }
